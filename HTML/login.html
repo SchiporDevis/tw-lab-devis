@@ -3,29 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Login - Comunitatea de Tehnologii Web 2025</title>
     <link rel="stylesheet" href="../CSS/login_style.css" />
-    <script src="../JS/login_js.js"></script>
   </head>
   <body>
-    <div class="login-wrapper">
-      <div class="logo-section">
-        <img src="../MEDIA/logo.png" alt="TW Logo" class="tw-logo" />
+    <header>
+      <div class="container">
+        <h1>Comunitatea de Tehnologii Web 2025</h1>
+        <nav>
+          <a href="home.html">Acasă</a>
+          <a href="universities.html">Lista de facultăți</a>
+          <a href="#">Tehnologii relevante</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="chatbot.html">ChatBot</a>
+          <a href="login.html" class="logout-btn">Logout</a>
+        </nav>
       </div>
+    </header>
 
-      <div class="divider"></div>
+    <main class="container login-main">
+      <div class="login-wrapper">
+        <div class="logo-section">
+          <img src="../MEDIA/logo.png" alt="TW Logo" class="tw-logo" />
+        </div>
 
-      <div class="form-section">
-        <h2>Login</h2>
-        <form id="loginForm">
-          <input type="email" id="email" placeholder="Email" />
-          <input type="password" id="password" placeholder="Parola" />
-          <button type="submit">Login</button>
-        </form>
-        <p class="register-text">
-          Nu ai cont? <a href="register.html">Înregistrează-te</a>
+        <div class="divider"></div>
+
+        <div class="form-section">
+          <h2>Login</h2>
+          <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Parola" />
+            <button type="submit">Login</button>
+          </form>
+          <p class="register-text">
+            Nu ai cont? <a href="register.html">Înregistrează-te</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Comunitatea de Tehnologii Web</p>
+        <p>
+          <a href="https://www.uvt.ro" target="_blank">Universitatea de Vest din Timișoara</a> |
+          <a href="https://www.info.uvt.ro" target="_blank">Facultatea de Matematică și Informatică</a>
         </p>
       </div>
-    </div>
+    </footer>
+
+    <script src="../JS/login_js.js"></script>
   </body>
 </html>

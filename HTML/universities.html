@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universități din România</title>
+    <title>Universități din România - Comunitatea de Tehnologii Web 2025</title>
     <link rel="stylesheet" href="../CSS/universities_style.css">
 </head>
 <body>
 
     <header>
-        <h2>Universități din România</h2>
-        <nav>
-            <a href="home.html">Acasă</a>
-            <a href="universities.html">Lista de facultăți</a>
-            <a href="chatbot.html">ChatBot</a>
-            <a href="login.html">Logout</a>
-        </nav>
+        <div class="container">
+            <h1>Comunitatea de Tehnologii Web 2025</h1>
+            <nav>
+                <a href="home.html">Acasă</a>
+                <a href="universities.html">Lista de facultăți</a>
+                <a href="#">Tehnologii relevante</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="chatbot.html">ChatBot</a>
+                <a href="login.html" class="logout-btn">Logout</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <h1>Universități din România</h1>
+    <main class="container">
+        <h2 class="page-title">Universități din România</h2>
 
         <div class="controls">
             <div>
@@ -41,7 +45,17 @@
             </thead>
             <tbody id="tbody"></tbody>
         </table>
-    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Comunitatea de Tehnologii Web</p>
+            <p>
+                <a href="https://www.uvt.ro" target="_blank">Universitatea de Vest din Timișoara</a> | 
+                <a href="https://www.info.uvt.ro" target="_blank">Facultatea de Matematică și Informatică</a>
+            </p>
+        </div>
+    </footer>
 
     <script src="../JS/universities_js.js"></script>
 </body>

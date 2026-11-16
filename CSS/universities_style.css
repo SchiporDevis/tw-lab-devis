@@ -1,44 +1,83 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    height: 100%;
+    background-color: #f4f6f8;
+    color: #333333;
+}
+
 body {
-    margin: 0;
-    padding: 16px;
-    background: #0f172a;
-    color: #e5e7eb;
-}
-
-header {
-    background-color: #1e293b;
-    padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    flex-direction: column;
 }
 
-header h2 {
-    font-size: 20px;
-    color: #38bdf8;
-}
-
-header nav a {
-    color: #e5e7eb;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: bold;
-}
-
-header nav a:hover {
-    color: #38bdf8;
+main {
+    width: 1100px;
+    margin: 0 auto;
+    flex: 1;
+    padding: 20px;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: #f39c12;
+}
+
+.logout-btn {
+    border: 1px solid #e74c3c;
+    padding: 5px 12px;
+    border-radius: 4px;
+    color: #e74c3c !important;
+}
+
+.logout-btn:hover {
+    background-color: #e74c3c;
+    color: white !important;
+}
+
+/* --- CONTENT --- */
+.page-title {
+    margin: 20px 0 15px;
+    color: #2c3e50;
+    font-size: 24px;
 }
 
 .controls {
@@ -49,59 +88,119 @@ header nav a:hover {
     flex-wrap: wrap;
 }
 
+.controls label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 6px;
+}
+
 .status {
-    opacity: .8;
+    color: #555555;
+    font-size: 14px;
     margin: 8px 0;
 }
 
 input {
-    padding: .5rem;
-    border-radius: .5rem;
-    border: 1px solid #334155;
-    background: #0b1220;
-    color: #e5e7eb;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #3498db;
 }
 
 button {
-    padding: .5rem 1rem;
-    border-radius: .5rem;
-    border: 1px solid #38bdf8;
-    background: #38bdf8;
-    color: #0f172a;
+    padding: 9px 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #3498db;
+    color: white;
     font-weight: bold;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 button:hover {
-    background: #0284c7;
-    color: #ffffff;
+    background-color: #2980b9;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 8px;
-    background: #1e293b;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
 }
 
 th, td {
-    padding: .55rem;
-    border-bottom: 1px solid #334155;
+    padding: 10px 12px;
+    border-bottom: 1px solid #dddddd;
     text-align: left;
     vertical-align: top;
+    font-size: 14px;
 }
 
 th {
-    background: #273549;
+    background-color: #2c3e50;
     color: #ffffff;
 }
 
 td a {
-    color: #a7f3d0;
+    color: #2980b9;
     text-decoration: none;
 }
 
 td a:hover {
     text-decoration: underline;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+}
+
+@media (max-width: 1150px) {
+    main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 22px;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
